@@ -7,13 +7,14 @@ async function fetchMessages() {
     const element = document.querySelector('.box div');
     element.innerHTML = ''; 
 
-    
     const quotesToDisplay = json.slice(0, 10);
 
     for (const message of quotesToDisplay) {
         const quote = message.quote; 
         const author = message.author;
         element.innerHTML += `<p>"${quote}" - ${author}</p>`;
+    }
 }
 
 fetchMessages();
+
